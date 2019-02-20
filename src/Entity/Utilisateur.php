@@ -3,11 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UtilisateurRepository")
  */
-class Utilisateur
+class Utilisateur implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -121,5 +122,35 @@ class Utilisateur
         $this->mdp = $mdp;
 
         return $this;
+    }
+
+    public function getPassword()
+    {
+        // TODO: Implement getPassword() method.
+        return $this->mdp;
+    }
+
+    public function getUsername()
+    {
+        // TODO: Implement getUsername() method.
+        return $this->email;
+    }
+
+    public function getRoles()
+    {
+        // TODO: Implement getRoles() method.
+        return [
+            'ROLE_USER'
+        ];
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }
