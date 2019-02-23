@@ -20,7 +20,7 @@ class UserFixture extends Fixture
     {
         $user = new Utilisateur();
 
-        $user->setEmail('admin');
+        $user->setEmail('admin@twyrael.fr');
 
         $user->setMdp(
             $this->encoder->encodePassword($user, 'twyrael123')
