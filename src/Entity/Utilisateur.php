@@ -35,7 +35,7 @@ class Utilisateur implements UserInterface
     private $pseudo;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $prive;
 
