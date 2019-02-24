@@ -40,9 +40,12 @@ class RegistrationFormType extends AbstractType
             ->add('pseudo')
             ->add('nom')
             ->add('prenom')
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, [
+                'required' => false
+            ])
             ->add('prive', CheckboxType::class, [
                 'mapped' => false,
+                'required' => false
             ])
 
         ;
