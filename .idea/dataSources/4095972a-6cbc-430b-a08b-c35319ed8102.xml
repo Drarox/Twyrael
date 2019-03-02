@@ -1332,7 +1332,6 @@
     <column id="318" parent="280" name="prive">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="319" parent="280" name="description">
