@@ -15,7 +15,8 @@ class MessageType extends AbstractType
         $builder
             //->add('dateCreation')
             ->add('contenu', TextareaType::class, [
-                'required' => true
+                'required' => true,
+                'label' => ' '
             ])
             //->add('idUserCreation')
             //->add('dateModif')
