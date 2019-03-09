@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Messages;
+use App\Entity\Follow;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -9,12 +11,32 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function index(UserInterface $user)
     {
         $currentUser= $user->getId();
         $userName= $user->getUsername();
+
+        //$em = $this->getDoctrine()->getManager();
+        //$message = $em->getRepository(Messages::class)->findAll();
+
+        $em = $this->getDoctrine ()->getManager ();
+        $repository = $em->getRepository ( Messages::class);
+        $result = $repository->findByUserId($currentUser);
+
+//        $qb = $em->createQueryBuilder();
+//
+//        $qb->select('m')
+//            ->from('Messages','m')
+//            ->where('m.id_user_creation= :id')
+//            ->setParameter('id', 1);
+//
+//        $query = $qb->getQuery();
+//        $result = $query->getResult();
+
+        print_r($result);
+//        $array = $query->getArrayResult();
 
         //query :
 //      use twyrael;
