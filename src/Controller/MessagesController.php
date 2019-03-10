@@ -52,7 +52,7 @@ class MessagesController extends AbstractController
                $entityManager->persist($message);
                $entityManager->flush();
                echo "<script>alert('Message posté!');</script>";
-//            return $this->redirectToRoute('task_success'); //todo
+               return $this->redirectToRoute('home');
            }
 
 

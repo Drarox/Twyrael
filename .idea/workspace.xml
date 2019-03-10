@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7b29a553-4200-46b6-b48d-83955e275c5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MessagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfilController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Authenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/messages/post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/messages/post.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profil/profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profil/profil.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,19 +60,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/MessagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="278">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
               <folding>
                 <element signature="e#34#58#0#PHP" expanded="true" />
               </folding>
@@ -77,35 +72,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Utilisateur.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
               <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
+                <element signature="e#34#99#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/home.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="64" />
+            <state relative-caret-position="225">
+              <caret line="33" column="193" selection-start-line="33" selection-start-column="193" selection-end-line="33" selection-end-column="193" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#34#58#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,23 +98,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/ProfilController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="645">
+              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+              <folding>
+                <element signature="e#34#56#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/profil/profil.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/home/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+            <state relative-caret-position="195">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://4095972a-6cbc-430b-a08b-c35319ed8102/schema/twyrael/table/utilisateur">
+        <entry file="das://4095972a-6cbc-430b-a08b-c35319ed8102/schema/twyrael/table/follow">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -141,20 +128,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="48" selection-start-line="48" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/MessagesRepository.php">
+        <entry file="file://$PROJECT_DIR$/src/Security/Authenticator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state relative-caret-position="312">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/profil/profil.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding>
-                <element signature="e#34#58#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/messages/post.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -179,21 +185,21 @@
         <option value="$PROJECT_DIR$/src/Form/RegistrationFormType.php" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/Form/MessageType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/MessagesController.php" />
         <option value="$PROJECT_DIR$/src/Repository/MessagesRepository.php" />
-        <option value="$PROJECT_DIR$/src/Security/Authenticator.php" />
-        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
         <option value="$PROJECT_DIR$/templates/registration/register.html.twig" />
-        <option value="$PROJECT_DIR$/templates/messages/post.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/UtilisateurRepository.php" />
         <option value="$PROJECT_DIR$/templates/profil/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/home/home.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/ProfilController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Utilisateur.php" />
         <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
+        <option value="$PROJECT_DIR$/src/Security/Authenticator.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ProfilController.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/profil/profil.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/templates/messages/post.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/MessagesController.php" />
+        <option value="$PROJECT_DIR$/templates/home/home.html.twig" />
       </list>
     </option>
   </component>
@@ -304,8 +310,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
-    <option name="y" value="233" />
+    <option name="x" value="47" />
+    <option name="y" value="145" />
     <option name="width" value="1616" />
     <option name="height" value="883" />
   </component>
@@ -490,15 +496,15 @@
       <workItem from="1549905016578" duration="3009000" />
       <workItem from="1549986252804" duration="717000" />
       <workItem from="1550321319278" duration="2994000" />
-      <workItem from="1551618185679" duration="16431000" />
+      <workItem from="1551618185679" duration="19161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40643000" />
+    <option name="totallyTimeSpent" value="43373000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="233" width="1616" height="883" extended-state="0" />
+    <frame x="47" y="145" width="1616" height="883" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16242038" />
@@ -683,23 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Security/Authenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="101" column="1" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://4095972a-6cbc-430b-a08b-c35319ed8102/schema/twyrael/table/messages">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -728,16 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/messages/post.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/UtilisateurRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -745,34 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="48" selection-start-line="48" selection-end-line="58" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/MessagesRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/MessagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="43" />
           <folding>
             <element signature="e#34#58#0#PHP" expanded="true" />
           </folding>
@@ -796,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProfilController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://4095972a-6cbc-430b-a08b-c35319ed8102/schema/twyrael/table/utilisateur">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -810,22 +758,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/home.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProfilController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="64" />
+        <state relative-caret-position="645">
+          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#34#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/profil/profil.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4095972a-6cbc-430b-a08b-c35319ed8102/schema/twyrael/table/follow">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/messages/post.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Security/Authenticator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="193" selection-start-line="33" selection-start-column="193" selection-end-line="33" selection-end-column="193" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#34#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MessagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>

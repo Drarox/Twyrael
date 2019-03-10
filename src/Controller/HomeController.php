@@ -31,7 +31,7 @@ class HomeController extends AbstractController
         $RAW_QUERY = '
 select messages.*, utilisateur.pseudo from messages left outer join utilisateur on utilisateur.id=messages.id_user_creation where messages.id_user_creation = :id
 union 
-select messages.*, utilisateur.pseudo from messages, follow, utilisateur where messages.id_user_creation = follow.id_user2 and utilisateur.id=messages.id_user_creation and follow.id_user1 = 1        
+select messages.*, utilisateur.pseudo from messages, follow, utilisateur where messages.id_user_creation = follow.id_user2 and utilisateur.id=messages.id_user_creation and follow.id_user1 = :id       
         ';
 
         $statement = $em->getConnection()->prepare($RAW_QUERY);
