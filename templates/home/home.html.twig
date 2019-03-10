@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Bonjour {{ user[0].pseudo }} ✅</h1>
+
+    <a href="/postamessage" style="text-decoration: none"> <input type="button" value="Poster un message"> </a>
+    <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
+    <a href="/logout" style="text-decoration: none"> <input type="button" value="Déconnexion"> </a>
+
+    <h2>Derniers messages :</h2>
+
+    {% for attribut in result %}
+        <span>
+            <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/profil/{{ attribut.id_user_creation }}">{{ attribut.pseudo }}</a> à écrit : </h4>
+        {{attribut.contenu}} <br>
+        </span>
+        <br>
+    {% endfor %}
+</div>
+{% endblock %}

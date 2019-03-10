@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Poster un message{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    textarea {
+        width: 600px;
+        height: 150px;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Message : </h1>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+    <br> <input type="submit" value="Poster">
+    {{ form_end(form) }}
+    <br>
+    <a href="/" style="text-decoration: none"> <input type="button" value="Retour"> </a>
+</div>
+{% endblock %}
