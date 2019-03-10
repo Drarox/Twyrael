@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Poster un message{% endblock %}
+
+{% block body %}
+<style>
+    textarea {
+        width: 600px;
+        height: 150px;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Message : </h1>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+    <br> <input type="submit" value="Poster">
+    {{ form_end(form) }}
+</div>
+<br>
+    <a href="/" style="text-decoration: none"> <input type="button" value="Retour"> </a>
+{% endblock %}

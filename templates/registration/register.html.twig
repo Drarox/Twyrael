@@ -3,6 +3,14 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
+
+<style>
+    textarea {
+        width: 350px;
+        height: 75px;
+    }
+</style>
+
     <h1>Créer un compte</h1>
 
     {{ form_start(registrationForm) }}
@@ -20,5 +28,5 @@
     <p>* requis</p>
     <br>
     <br>
-    <a href="/login">Se connecter</a>
+    <a href="/login" style="text-decoration: none"> <input type="button" value="Se connecter"> </a>
 {% endblock %}

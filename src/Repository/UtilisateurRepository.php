@@ -19,6 +19,19 @@ class UtilisateurRepository extends ServiceEntityRepository
         parent::__construct($registry, Utilisateur::class);
     }
 
+    public function getUsername($id)
+    {
+        $qb = $this->createQueryBuilder('u');
+
+        $qb->where('u.id= :id')
+            ->setParameter('id', $id);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Utilisateur[] Returns an array of Utilisateur objects
     //  */
