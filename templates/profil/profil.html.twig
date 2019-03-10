@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfilController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Profile de {{ result[0].pseudo }}</h1>
+
+    <span><h4>Nom : </h4>{{ result[0].nom }}</span><br>
+    <span><h4>Prénom : </h4>{{ result[0].prenom }}</span><br>
+    <span><h4>E-mail : </h4>{{ result[0].email }}</span><br>
+    <span><h4>Description : </h4>{{ result[0].description }}</span><br>
+    <span><h4>Membre depuis : </h4>{{ result[0].datecreation|date('d/m/Y H:i:s')  }}</span><br>
+
+</div>
+{% endblock %}
