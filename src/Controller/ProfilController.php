@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class ProfilController extends AbstractController
 {
     /**
-     * @Route("/profil/{id}", name="use Symfony\Component\Security\Core\User\UserInterface;profil")
+     * @Route("/profil/{id}", name="profil")
      */
     public function index($id, UserInterface $user)
     {
@@ -53,7 +53,9 @@ class ProfilController extends AbstractController
 
         echo "<script>alert('Compte suivi');</script>";
 
-        return $this->redirectToRoute('home');
+        //return $this->redirectToRoute('profil/'.str($id));
+        //echo "<script>history.go(-1);</script>";
+        return $this->redirectToRoute('profil', array('id' => $id));
     }
 
 
@@ -74,7 +76,7 @@ class ProfilController extends AbstractController
 
         echo "<script>alert('Compte bloqué');</script>";
 
-        return $this->redirectToRoute('home');
+        return $this->redirectToRoute('profil', array('id' => $id));
     }
 
     /**
@@ -96,11 +98,11 @@ class ProfilController extends AbstractController
 
         echo "<script>alert('Ce compte n\'est plus suivi');</script>";
 
-        return $this->redirectToRoute('home');
+        return $this->redirectToRoute('profil', array('id' => $id));
     }
 
     /**
-     * @Route("/unblock/{id}", name="unfollow")
+     * @Route("/unblock/{id}", name="unblock")
      */
     public function unblock($id, UserInterface $user)
     {
@@ -118,6 +120,6 @@ class ProfilController extends AbstractController
 
         echo "<script>alert('Ce compte n\'est plus bloqué');</script>";
 
-        return $this->redirectToRoute('home');
+        return $this->redirectToRoute('profil', array('id' => $id));
     }
 }
