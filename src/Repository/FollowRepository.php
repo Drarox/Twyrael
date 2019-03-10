@@ -19,6 +19,21 @@ class FollowRepository extends ServiceEntityRepository
         parent::__construct($registry, Follow::class);
     }
 
+    public function alreadyExist($id1, $id2)
+    {
+        $qb = $this->createQueryBuilder('f');
+
+        $qb->where('f.idUser1 = :id1')
+            ->setParameter('id1', $id1)
+            ->andWhere('f.idUser2 = :id2')
+            ->setParameter('id2', $id2);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Follow[] Returns an array of Follow objects
     //  */

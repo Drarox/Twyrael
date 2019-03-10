@@ -34,6 +34,8 @@ class RegistrationController extends AbstractController
 
             $prive= $form->get('prive')->getData();
             $user->setPrive($prive);
+            $currentDateTime = new \DateTime();
+            $user->setDateCreation($currentDateTime);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
