@@ -30,6 +30,8 @@
     <span><h4>E-mail : </h4>{{ result[0].email }}</span><br>
     <span><h4>Description : </h4>{{ result[0].description }}</span><br>
     <span><h4>Membre depuis : </h4>{{ result[0].datecreation|date('d/m/Y H:i:s')  }}</span><br>
+    <br>
+    <a href="javascript:history.back()" style="text-decoration: none"> <input type="button" value="Retour"> </a>
 
 </div>
 {% endblock %}

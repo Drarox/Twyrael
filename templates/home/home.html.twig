@@ -12,14 +12,14 @@
     <h1>Bonjour {{ user[0].pseudo }} ✅</h1>
 
     <a href="/postamessage" style="text-decoration: none"> <input type="button" value="Poster un message"> </a>
-    <a href="/profil/{{ user[0].id }}" target="_blank" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
+    <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
     <a href="/logout" style="text-decoration: none"> <input type="button" value="Déconnexion"> </a>
 
     <h2>Derniers messages :</h2>
 
     {% for attribut in result %}
         <span>
-            <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, {{ attribut.pseudo }} à écrit : </h4>
+            <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/profil/{{ attribut.id_user_creation }}">{{ attribut.pseudo }}</a> à écrit : </h4>
         {{attribut.contenu}} <br>
         </span>
         <br>
