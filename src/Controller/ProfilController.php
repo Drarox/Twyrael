@@ -122,4 +122,5 @@ class ProfilController extends AbstractController
 
         return $this->redirectToRoute('profil', array('id' => $id));
     }
+
 }
