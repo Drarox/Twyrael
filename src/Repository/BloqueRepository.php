@@ -19,6 +19,21 @@ class BloqueRepository extends ServiceEntityRepository
         parent::__construct($registry, Bloque::class);
     }
 
+    public function alreadyExist($id1, $id2)
+    {
+        $qb = $this->createQueryBuilder('b');
+
+        $qb->where('b.idUser1 = :id1')
+            ->setParameter('id1', $id1)
+            ->andWhere('b.idUser2 = :id2')
+            ->setParameter('id2', $id2);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Bloque[] Returns an array of Bloque objects
     //  */

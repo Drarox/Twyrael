@@ -54,6 +54,11 @@ class Utilisateur implements UserInterface
      */
     private $mdp;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $dateCreation;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -139,6 +144,18 @@ class Utilisateur implements UserInterface
     public function setMdp(string $mdp): self
     {
         $this->mdp = $mdp;
+
+        return $this;
+    }
+
+    public function getDateCreation(): ?\DateTimeInterface
+    {
+        return $this->dateCreation;
+    }
+
+    public function setDateCreation(\DateTimeInterface $dateCreation): self
+    {
+        $this->dateCreation = $dateCreation;
 
         return $this;
     }
