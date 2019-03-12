@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Follow and Block of {{ currentusername[0].pseudo }}{% endblock %}
+
+{% block body %}
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h2>Personnes que {{ currentusername[0].pseudo }} suis :</h2>
+        {% for follow in resultFollow %}
+            <li>
+            <la><a href="/profil/{{ follow.id }}">{{ follow.pseudo }}</a></la>
+            </li>
+        {% endfor %}
+        <h2>Personnes qui suivent {{ currentusername[0].pseudo }} :</h2>
+        {% for BeFollow in resultBeFollow %}
+            <li>
+                <la><a href="/profil/{{ BeFollow.id }}">{{ BeFollow.pseudo }}</a></la>
+            </li>
+        {% endfor %}
+        <h2>Personnes que {{ currentusername[0].pseudo }} bloque :</h2>
+        {% for block in resultBlock %}
+            <li>
+                <la><a href="/profil/{{ block.id}}">{{ block.pseudo }}</a></la>
+            </li>
+        {% endfor %}
+        <h2>Personnes qui bloquent {{ currentusername[0].pseudo }} :</h2>
+        {% for BeBlock in resultBeBlock %}
+            <li>
+                <la><a href="/profil/{{ BeBlock.id}}">{{ BeBlock.pseudo }}</a></la>
+            </li>
+        {% endfor %}
+
+        <br>
+        <a href="javascript:history.back()" style="text-decoration: none"> <input type="button" value="Retour"> </a>
+    </div>
+{% endblock %}

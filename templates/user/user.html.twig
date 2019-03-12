@@ -1,20 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ result[0].pseudo }}{% endblock %}
+{% block title %}Messages de {{ user[0].pseudo }}{% endblock %}
 
 {% block body %}
-
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
 <div class="example-wrapper">
-    <h1>Profile de {{ result[0].pseudo }}</h1>
+    <h1>Derniers messages posté par {{ user[0].pseudo }} : </h1>
 
-    <a href="/user/{{ result[0].pseudo }}" style="text-decoration: none"> <input type="button" value="Voir les derniers messages posté"> </a>
-    <a href="/followandblock/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Voir personnes suivi et bloqué"> </a>
-    <br><br>
     {% if alreadyFollow == false %}
         <a href="/follow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Suivre"> </a>
     {% else  %}
@@ -26,15 +22,17 @@
     {% else  %}
         <a href="/unblock/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus Bloquer"> </a>
     {% endif %}
-
-
-    <span><h4>Nom : </h4>{{ result[0].nom }}</span><br>
-    <span><h4>Prénom : </h4>{{ result[0].prenom }}</span><br>
-    <span><h4>E-mail : </h4>{{ result[0].email }}</span><br>
-    <span><h4>Description : </h4>{{ result[0].description }}</span><br>
-    <span><h4>Membre depuis : </h4>{{ result[0].datecreation|date('d/m/Y H:i:s')  }}</span><br>
-    <br>
+    <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Voir profile"> </a>
     <a href="javascript:history.back()" style="text-decoration: none"> <input type="button" value="Retour"> </a>
+    <br>
+
+    {% for attribut in result %}
+        <span>
+            <h4>Le {{attribut.dateCreation|date('d/m/Y H:i:s') }}, <a href="/profil/{{ attribut.idUserCreation }}">{{ user[0].pseudo }}</a> à écrit : </h4>
+        {{attribut.contenu}} <br>
+        </span>
+        <br>
+    {% endfor %}
 
 </div>
 {% endblock %}

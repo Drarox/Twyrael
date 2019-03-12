@@ -32,6 +32,19 @@ class UtilisateurRepository extends ServiceEntityRepository
             ;
     }
 
+    public function getID($pseudo)
+    {
+        $qb = $this->createQueryBuilder('u');
+
+        $qb->where('u.pseudo = :pseudo')
+            ->setParameter('pseudo', $pseudo);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Utilisateur[] Returns an array of Utilisateur objects
     //  */

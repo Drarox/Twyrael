@@ -18,7 +18,7 @@ class HomeController extends AbstractController
     public function index(UserInterface $user)
     {
         $currentUser= $user->getId();
-        $user= $this->getUsernameById($currentUser);
+        $username= $this->getUsernameById($currentUser);
 //        print_r($user);
 
         //$em = $this->getDoctrine()->getManager();
@@ -68,7 +68,7 @@ select messages.*, utilisateur.pseudo from messages, follow, utilisateur where m
 
 
         return $this->render('home/home.html.twig', [
-            'user' => $user,
+            'user' => $username,
             'result' => $result,
         ]);
     }
@@ -80,4 +80,6 @@ select messages.*, utilisateur.pseudo from messages, follow, utilisateur where m
         $result = $repository->getUsername($id);
         return $result;
     }
+
+
 }
