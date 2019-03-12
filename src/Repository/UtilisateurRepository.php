@@ -45,6 +45,18 @@ class UtilisateurRepository extends ServiceEntityRepository
             ;
     }
 
+    public function getMemberList()
+    {
+        $qb = $this->createQueryBuilder('m');
+
+        $qb->where('1=1');
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Utilisateur[] Returns an array of Utilisateur objects
     //  */

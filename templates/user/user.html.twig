@@ -12,15 +12,15 @@
     <h1>Derniers messages posté par {{ user[0].pseudo }} : </h1>
 
     {% if alreadyFollow == false %}
-        <a href="/follow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Suivre"> </a>
+        <a href="/follow/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Suivre"> </a>
     {% else  %}
-        <a href="/unfollow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus suivre"> </a>
+        <a href="/unfollow/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus suivre"> </a>
     {% endif %}
 
     {% if alreadyBlock == false %}
-        <a href="/block/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Bloquer"> </a>
+        <a href="/block/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Bloquer"> </a>
     {% else  %}
-        <a href="/unblock/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus Bloquer"> </a>
+        <a href="/unblock/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus Bloquer"> </a>
     {% endif %}
     <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Voir profile"> </a>
     <a href="javascript:history.back()" style="text-decoration: none"> <input type="button" value="Retour"> </a>
