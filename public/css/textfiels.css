@@ -9,7 +9,6 @@ fieldset {
     padding:0 20px 20px 20px;
     margin-bottom:10px;
 }
-
 label {
     margin-top:4px;
     display: block;
@@ -20,7 +19,6 @@ label.inline {
     display: inline;
     margin-right: 50px;
 }
-
 input, textarea, select {
     padding:10px;
     border-radius:10px;

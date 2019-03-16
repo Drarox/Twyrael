@@ -1,6 +1,9 @@
 html, body {
     background-image: url("http://s1.1zoom.me/b5050/29/Diablo_III_Warriors_485277_2560x1440.jpg") ;
-    background-origin: padding-box ;
-    background-clip: border-box ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
 }
 
