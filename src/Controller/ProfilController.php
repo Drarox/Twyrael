@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Bloque;
 use App\Entity\Follow;
+use App\Form\ModifProfilType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Utilisateur;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class ProfilController extends AbstractController
 {
@@ -122,5 +124,32 @@ class ProfilController extends AbstractController
 
         return $this->redirectToRoute('profil', array('id' => $id));
     }
+
+//    /**
+//     * @Route("/modifprofil, name="modifprofil")
+//     */
+//    public function modifProfil(Request $request, UserInterface $user){
+//        $currentUser= $user->getId();
+//
+//        $em = $this->getDoctrine()->getManager ();
+//        $result = $em->getRepository ( Utilisateur::class)->findBy($currentUser);
+//
+//        $form = $this->createForm(new ModifProfilType(), $result);
+//
+//        if ($request->getMethod() == 'POST') {
+//            $form->bindRequest($request);
+//
+//            if ($form->isValid()) {
+//                // perform some action, such as save the object to the database
+//                $em->flush();
+//
+//                return $this->redirectToRoute('profil', array('id' => $currentUser));
+//            }
+//        }
+//
+//        return $this->render('profil/modif.html.twig', array(
+//            'form' => $form->createView()
+//        ));
+//    }
 
 }
