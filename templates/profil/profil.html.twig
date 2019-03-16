@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ result[0].pseudo }}{% endblock %}
+{% block title %}Profile de {{ result[0].pseudo }}{% endblock %}
 
 {% block body %}
 
@@ -14,19 +14,25 @@
 
     <a href="/user/{{ result[0].pseudo }}" style="text-decoration: none"> <input type="button" value="Voir les derniers messages posté"> </a>
     <a href="/followandblock/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Voir personnes suivi et bloqué"> </a>
-    <br><br>
-    {% if alreadyFollow == false %}
-        <a href="/follow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Suivre"> </a>
-    {% else  %}
-        <a href="/unfollow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus suivre"> </a>
-    {% endif %}
 
-    {% if alreadyBlock == false %}
-        <a href="/block/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Bloquer"> </a>
+    {% if currentUser == result[0].id  %}
+        <a href="/modifprofil" style="text-decoration: none"> <input type="button" value="Modifier mon profile"> </a>
     {% else  %}
-        <a href="/unblock/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus Bloquer"> </a>
-    {% endif %}
 
+        <br><br>
+        {% if alreadyFollow == false %}
+            <a href="/follow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Suivre"> </a>
+        {% else  %}
+            <a href="/unfollow/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus suivre"> </a>
+        {% endif %}
+
+        {% if alreadyBlock == false %}
+            <a href="/block/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Bloquer"> </a>
+        {% else  %}
+            <a href="/unblock/{{ result[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus Bloquer"> </a>
+        {% endif %}
+
+    {% endif %}
 
     <span><h4>Nom : </h4>{{ result[0].nom }}</span><br>
     <span><h4>Prénom : </h4>{{ result[0].prenom }}</span><br>

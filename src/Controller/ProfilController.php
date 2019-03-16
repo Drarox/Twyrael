@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Bloque;
 use App\Entity\Follow;
+use App\Form\ModifProfilType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Utilisateur;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class ProfilController extends AbstractController
 {
@@ -33,6 +35,7 @@ class ProfilController extends AbstractController
             'result' => $result,
             'alreadyFollow' => $alreadyFollow,
             'alreadyBlock' => $alreadyBlock,
+            'currentUser' => $currentUser,
         ]);
     }
 
@@ -122,5 +125,6 @@ class ProfilController extends AbstractController
 
         return $this->redirectToRoute('profil', array('id' => $id));
     }
+
 
 }
