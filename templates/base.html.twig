@@ -5,8 +5,10 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
+            <link href="{{ asset('css/textfiels.css') }}" rel="stylesheet" />
             <link href="{{ asset('css/Background.css') }}" rel="stylesheet" />
             <link href="{{ asset('css/Text.css') }}" rel="stylesheet" />
+
         {% endblock %}
     </head>
     <body>
