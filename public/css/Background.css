@@ -1,13 +1,8 @@
 html, body {
-    background-image: url("http://s1.1zoom.me/b5050/29/Diablo_III_Warriors_485277_2560x1440.jpg")
-;
-    background-repeat: no-repeat
+    background-image: url("http://s1.1zoom.me/b5050/29/Diablo_III_Warriors_485277_2560x1440.jpg") ;
+    background-repeat: no-repeat ;
+    background-origin: padding-box ;
+    background-clip: border-box ;
 
-;
-    background-origin: padding-box
-
-;
-    background-clip: border-box
-
-;
 }
+
