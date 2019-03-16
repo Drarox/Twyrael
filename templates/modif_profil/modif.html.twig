@@ -14,7 +14,7 @@
 
 <div class="example-wrapper">
 
-    <h1>Modification du profile</h1>
+    <h1>Modification de votre profile</h1>
 
     {{ form_start(form) }}
     {{ form_row(form.email, { 'label': 'E-Mail* '}) }}
@@ -29,5 +29,7 @@
     <button class="btn">Valider</button>
     {{ form_end(form) }}
     <p>* requis</p>
+    <br>
+    <a href="javascript:history.back()" style="text-decoration: none"> <input type="button" value="Retour"> </a>
 </div>
 {% endblock %}

@@ -35,6 +35,7 @@ class ProfilController extends AbstractController
             'result' => $result,
             'alreadyFollow' => $alreadyFollow,
             'alreadyBlock' => $alreadyBlock,
+            'currentUser' => $currentUser,
         ]);
     }
 
@@ -125,31 +126,5 @@ class ProfilController extends AbstractController
         return $this->redirectToRoute('profil', array('id' => $id));
     }
 
-//    /**
-//     * @Route("/modifprofil, name="modifprofil")
-//     */
-//    public function modifProfil(Request $request, UserInterface $user){
-//        $currentUser= $user->getId();
-//
-//        $em = $this->getDoctrine()->getManager ();
-//        $result = $em->getRepository ( Utilisateur::class)->findBy($currentUser);
-//
-//        $form = $this->createForm(new ModifProfilType(), $result);
-//
-//        if ($request->getMethod() == 'POST') {
-//            $form->bindRequest($request);
-//
-//            if ($form->isValid()) {
-//                // perform some action, such as save the object to the database
-//                $em->flush();
-//
-//                return $this->redirectToRoute('profil', array('id' => $currentUser));
-//            }
-//        }
-//
-//        return $this->render('profil/modif.html.twig', array(
-//            'form' => $form->createView()
-//        ));
-//    }
 
 }

@@ -36,14 +36,13 @@ class ModifProfilController extends AbstractController
                     $passwordEncoder->encodePassword(
                         $result[0],
                         $form->get('plainPassword')->getData()
-                    )
-                );
+                        )
+                    );
+                    echo "<script>alert('Mot de passe modifié');</script>";
                 }
 
                 $prive= $form->get('prive')->getData();
                 $result[0]->setPrive($prive);
-                $currentDateTime = new \DateTime();
-                $result[0]->setDateCreation($currentDateTime);
 
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($result[0]);
