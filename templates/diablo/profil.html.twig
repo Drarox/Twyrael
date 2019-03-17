@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DiabloController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <span><h4>BattleTag : </h4>{{ result.BattleTag }}</span><br>
+    <span><h4>Parangon : </h4>{{ result.Parangon }}</span><br>
+    <span><h4>Parangon Saison : </h4>{{ result.ParaSaison }}</span><br>
+    <span><h4>Kills : </h4>{{ result.kills }}</span><br>
+    <span><h4>Elites tué: </h4>{{ result.elites }}</span><br>
+</div>
+{% endblock %}

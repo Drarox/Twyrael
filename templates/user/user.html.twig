@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Messages de {{ user[0].pseudo }}{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Derniers messages posté par {{ user[0].pseudo }} : </h1>
+
+    {% if alreadyFollow == false %}
+        <a href="/follow/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Suivre"> </a>
+    {% else  %}
+        <a href="/unfollow/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus suivre"> </a>
+    {% endif %}
+
+    {% if alreadyBlock == false %}
+        <a href="/block/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Bloquer"> </a>
+    {% else  %}
+        <a href="/unblock/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Ne plus Bloquer"> </a>
+    {% endif %}
+    <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Voir profile"> </a>
+    <a href="javascript:history.back()" style="text-decoration: none"> <input type="button" value="Retour"> </a>
+    <br>
+
+    {% for attribut in result %}
+        <span>
+            <h4>Le {{attribut.dateCreation|date('d/m/Y H:i:s') }}, <a href="/profil/{{ attribut.idUserCreation }}">{{ user[0].pseudo }}</a> à écrit : </h4>
+        {{attribut.contenu}} <br>
+        </span>
+        <br>
+    {% endfor %}
+
+</div>
+{% endblock %}

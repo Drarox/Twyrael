@@ -19,6 +19,19 @@ class ReponseRepository extends ServiceEntityRepository
         parent::__construct($registry, Reponse::class);
     }
 
+    public function findByMessageId($id)
+    {
+        $qb = $this->createQueryBuilder('r');
+
+        $qb->where('r.idMessage= :id')
+            ->setParameter('id', $id);
+
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Reponse[] Returns an array of Reponse objects
     //  */

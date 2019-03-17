@@ -8,21 +8,40 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Bonjour {{ user[0].pseudo }} ✅</h1>
+    <div class="example-wrapper">
+        <h1>Bonjour {{ user[0].pseudo }} ✅</h1>
 
-    <a href="/postamessage" style="text-decoration: none"> <input type="button" value="Poster un message"> </a>
-    <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
-    <a href="/logout" style="text-decoration: none"> <input type="button" value="Déconnexion"> </a>
+        <a href="/postamessage" style="text-decoration: none"> <input type="button" value="Poster un message"> </a>
+        <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
+        <a href="/members" style="text-decoration: none"> <input type="button" value="Membres"> </a>
+        <a href="/logout" style="text-decoration: none"> <input type="button" value="Déconnexion"> </a>
 
-    <h2>Derniers messages :</h2>
+        <h2>Derniers messages :</h2>
 
     {% for attribut in result %}
-        <span>
-            <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/profil/{{ attribut.id_user_creation }}">{{ attribut.pseudo }}</a> à écrit : </h4>
+
+        <span class="message">
+            <div class="fullborder">
+            <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/user/{{ attribut.pseudo }}">{{ attribut.pseudo }}</a> à écrit : </h4>
         {{attribut.contenu}} <br>
         </span>
+        {% for rep in reply %}
+            {% if rep[0][0].idMessage == attribut.id %}
+                <div class="border">
+                <span class="reply">
+                        <h4 class="h4redef">Le {{rep[0][0].date|date('d/m/Y H:i:s') }}, <a href="/user/{{ rep[1] }}">{{ rep[1] }}</a> à répondu : </h4>
+                        {{rep[0][0].contenu}} <br>
+                </span>
+                </div>
+            {% endif %}
+
+        {% endfor %}
+        </div>
+        <a href="/reply/{{ attribut.id }}" style="text-decoration: none"> <input type="button" value="Répondre"> </a>
+        {% if attribut.id_user_creation == user[0].id%}
+            <a href="/delete/{{ attribut.id }}" style="text-decoration: none"> <input type="button" value="Supprimer"> </a>
+        {% endif %}
         <br>
     {% endfor %}
-</div>
+    </div>
 {% endblock %}
