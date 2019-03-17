@@ -29,17 +29,6 @@ h4 {
     word-spacing: 0.5pt;
     line-height: 1;
 }
-
-body {
-    font-family: Georgia, Arial, sans-serif;
-    position: relative;
-    color: white;
-    text-align: center;
-    font-size: 60px;
-    letter-spacing: 1.2pt;
-    line-height: 0.5;
-}
-
 li {
     text-align: left;
     letter-spacing: 1.2pt;
@@ -53,4 +42,36 @@ li {
 a{
     color: #a0100d;
 }
-
+.message{
+    font-family: Arial sans-serif;
+    font-weight: 260;
+    letter-spacing: 1.8px;
+    font-size: 22px;
+    word-spacing: 0.5pt;
+    line-height: 1;
+}
+.h4redef{
+    font-size: 26px;
+    text-align: left;
+}
+.reply {
+    font-family: Arial sans-serif;
+    letter-spacing: 1.8px;
+    font-size: 18px;
+    word-spacing: 0.5pt;
+    line-height: 1;
+    text-align: left;
+}
+.border {
+    font-size: 22px;
+    text-align: left;
+}
+body {
+    font-family: Georgia, Arial, sans-serif;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 65px;
+    letter-spacing: 1.2pt;
+    line-height: 0.5;
+}
