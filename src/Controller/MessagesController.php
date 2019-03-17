@@ -63,4 +63,24 @@ class MessagesController extends AbstractController
 //            'controller_name' => 'MessagesController',
 //        ]);
     }
+
+    /**
+     * @Route("/delete/{id}", name="delete")
+     */
+    public function delete($id, UserInterface $user)
+    {
+        $currentUser= $user->getId();
+        $em = $this->getDoctrine()->getManager ();
+        $repositoryMessages = $em->getRepository ( Messages::class);
+        $result = $repositoryMessages->find($id);
+
+        if ($currentUser==$result->getIdUserCreation()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($result);
+            $entityManager->flush();
+            echo "<script>alert('Message supprimé!');</script>";
+        }
+
+        return $this->redirectToRoute('home');
+    }
 }

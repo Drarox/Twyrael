@@ -33,6 +33,9 @@
 
         {% endfor %}
         <a href="/reply/{{ attribut.id }}" style="text-decoration: none"> <input type="button" value="Répondre"> </a>
+        {% if attribut.id_user_creation == user[0].id%}
+            <a href="/delete/{{ attribut.id }}" style="text-decoration: none"> <input type="button" value="Supprimer"> </a>
+        {% endif %}
         <br>
     {% endfor %}
 </div>
