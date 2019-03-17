@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Bloque;
 use App\Entity\Follow;
+use App\Entity\HeroDiablo;
 use App\Form\ModifProfilType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,11 +32,18 @@ class ProfilController extends AbstractController
         $blockresult = $blockrep->alreadyExist($currentUser,$id);
         if ($blockresult == null) { $alreadyBlock=false; } else { $alreadyBlock=true; }
 
+        $RAW_QUERY = 'select hero_diablo.* from hero_diablo, diablo where hero_diablo.id_profil=diablo.id and diablo.id_user= :id';
+        $statement = $em->getConnection()->prepare($RAW_QUERY);
+        $statement->bindValue('id', $id);
+        $statement->execute();
+        $resultDiablo = $statement->fetchAll();
+
         return $this->render('profil/profil.html.twig', [
             'result' => $result,
             'alreadyFollow' => $alreadyFollow,
             'alreadyBlock' => $alreadyBlock,
             'currentUser' => $currentUser,
+            'resultDiablo' => $resultDiablo,
         ]);
     }
 

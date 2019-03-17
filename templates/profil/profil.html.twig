@@ -17,7 +17,16 @@
 
     {% if currentUser == result[0].id  %}
         <a href="/modifprofil" style="text-decoration: none"> <input type="button" value="Modifier mon profile"> </a>
+        {% if resultDiablo %}
+            <a href="/diablo/{{ resultDiablo[0]['id'] }}" style="text-decoration: none"> <input type="button" value="Voir profile Diablo"> </a>
+        {% else  %}
+            <a href="/diablo/create" style="text-decoration: none"> <input type="button" value="Créer un profil diablo"> </a>
+        {% endif %}
     {% else  %}
+
+    {% if resultDiablo %}
+        <a href="/diablo/{{ resultDiablo[0]['id'] }}" style="text-decoration: none"> <input type="button" value="Voir profile Diablo"> </a>
+    {% endif %}
 
         <br><br>
         {% if alreadyFollow == false %}

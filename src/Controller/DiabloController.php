@@ -50,8 +50,8 @@ class DiabloController extends AbstractController
     public function profil($id, Request $request)
     {
         $em = $this->getDoctrine ()->getManager ();
-        $diablo = $em->getRepository ( Diablo::class)->find($id);
-        print_r($diablo);
+        $diablo = $em->getRepository ( HeroDiablo::class)->find($id);
+
 
         return $this->render('diablo/profil.html.twig', [
             'result' => $diablo,
