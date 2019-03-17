@@ -1,34 +1,22 @@
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    letter-spacing: 1.6pt;
-    word-spacing: -1.2pt;
-    line-height: 0.5;
-}
 html {
     width: 100%;
     height: 100%;
 }
 h1 {
     font-family: Cabin, sans-serif;
-    font-weight: 800;
+    font-weight: 740;
     margin: 20 20 55px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 65px;
     text-decoration: underline;
     word-spacing: -1.2pt;
-    line-height: 2;
+    line-height: 1.6;
 }
 h2 {
     font-family: Helvetica Neue, sans-serif;
-    font-weight: 500;
-    margin: 10 10 45px;
+    font-weight: 470;
+    margin: 20 10 45px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 55px;
@@ -40,8 +28,16 @@ h4 {
     font-weight: 380;
     margin: 10 10 35px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 30px;
+    font-size: 40px;
     word-spacing: 0.5pt;
+    line-height: 0.5;
+}
+body {
+    font-family: Georgia, Arial, sans-serif;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 1.2pt;
     line-height: 0.5;
 }

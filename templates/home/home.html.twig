@@ -8,22 +8,24 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Bonjour {{ user[0].pseudo }} ✅</h1>
+<div class="col-lg-30 mx-auto">
+    <div class="example-wrapper">
+        <h1>Bonjour {{ user[0].pseudo }} ✅</h1>
 
-    <a href="/postamessage" style="text-decoration: none"> <input type="button" value="Poster un message"> </a>
-    <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
-    <a href="/members" style="text-decoration: none"> <input type="button" value="Membres"> </a>
-    <a href="/logout" style="text-decoration: none"> <input type="button" value="Déconnexion"> </a>
+        <a href="/postamessage" style="text-decoration: none"> <input type="button" value="Poster un message"> </a>
+        <a href="/profil/{{ user[0].id }}" style="text-decoration: none"> <input type="button" value="Mon profile"> </a>
+        <a href="/members" style="text-decoration: none"> <input type="button" value="Membres"> </a>
+        <a href="/logout" style="text-decoration: none"> <input type="button" value="Déconnexion"> </a>
 
-    <h2>Derniers messages :</h2>
+        <h2>Derniers messages :</h2>
 
-    {% for attribut in result %}
-        <span>
-            <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/user/{{ attribut.pseudo }}">{{ attribut.pseudo }}</a> à écrit : </h4>
-        {{attribut.contenu}} <br>
-        </span>
-        <br>
-    {% endfor %}
+        {% for attribut in result %}
+            <span>
+                <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/user/{{ attribut.pseudo }}">{{ attribut.pseudo }}</a> à écrit : </h4>
+            {{attribut.contenu}} <br>
+            </span>
+            <br>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

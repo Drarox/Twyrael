@@ -1,9 +1,10 @@
 html, body {
-    background-image: url("http://s1.1zoom.me/b5050/29/Diablo_III_Warriors_485277_2560x1440.jpg") ;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    background-image: url("http://s1.1zoom.me/b5050/29/Diablo_III_Warriors_485277_2560x1440.jpg");
+    background-attachment: fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
+
 }
 
