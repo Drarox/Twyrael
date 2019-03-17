@@ -7,6 +7,14 @@ html, body {
     background-size: cover;
 
 }
+.fullborder {
+
+    margin-left: 10px;
+    margin-right: 55px;
+    padding: 15px;
+    border: 4px solid rgba(17, 47, 85, 0.67);
+    border-radius: 10px 23px / 8px 26px;
+}
 .border{
     margin-left: 10px;
     margin-right: 55px;
