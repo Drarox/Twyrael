@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Messages;
 use App\Entity\Follow;
+use App\Entity\Reponse;
 use App\Entity\Utilisateur;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -42,8 +43,17 @@ select messages.*, utilisateur.pseudo from messages, follow, utilisateur where m
         rsort($result);
         //print_r($result);
 
-
-
+        $reply = array();
+        $test = array();
+        foreach ($result as $mess) {
+            $replyRes = $em->getRepository(Reponse::class)->findByMessageId($mess['id']);
+            if ($replyRes != null) {
+                $pseudo = $em->getRepository ( Utilisateur::class)->getUsername($replyRes[0]->getIdUserCreation());
+                $test[0] =$replyRes;
+                $test[1] =$pseudo[0]->getPseudo();
+                array_push($reply, $test);
+            }
+        }
 
 //        $qb = $em->createQueryBuilder();
 //
@@ -70,6 +80,7 @@ select messages.*, utilisateur.pseudo from messages, follow, utilisateur where m
         return $this->render('home/home.html.twig', [
             'user' => $username,
             'result' => $result,
+            'reply' => $reply,
         ]);
     }
 
