@@ -26,6 +26,12 @@ input[type=submit]:active, input[type=reset]:active {
     background-color:#FCDEDE;
 }
 
+input[type="button"]:hover, input[type=reset]:hover {
+    background-color: #f8fff4;
+}
+input[type="button"]:active, input[type=reset]:active {
+    background-color:#FCDEDE;
+}
 input[type="submit"]
 {
     padding: 18px;
@@ -40,6 +46,7 @@ input[type="submit"]:hover
 {
     background-color: #a0100d;
 }
+
 input, textarea, select, button {
     width : 150px;
     margin: 0;
@@ -54,24 +61,21 @@ button {
     top          : 360px;
 
     padding      : 25px;
-    
+
     font         : bold 15px sans-serif;
     border       : 2px solid #333;
     border-radius: 10px;
     background-color: rgba(238, 233, 240, 0.45);
 }
-
 button:after {
     content: "  ";
 }
-
 button:hover,
 button:focus {
     outline   : none;
     background: #000;
     color   : #FFF;
 }
-
 input
 {
     width: auto;

@@ -11,7 +11,7 @@ h1 {
     font-size: 65px;
     text-decoration: underline;
     word-spacing: -1.2pt;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 h2 {
     font-family: Helvetica Neue, sans-serif;
@@ -21,17 +21,18 @@ h2 {
     text-transform: uppercase;
     font-size: 55px;
     word-spacing: 0.5pt;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 h4 {
     font-family: Arial sans-serif;
     font-weight: 380;
     margin: 10 10 35px;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
     font-size: 40px;
     word-spacing: 0.5pt;
-    line-height: 0.5;
+    line-height: 1;
 }
+
 body {
     font-family: Georgia, Arial, sans-serif;
     position: relative;
@@ -41,3 +42,16 @@ body {
     letter-spacing: 1.2pt;
     line-height: 0.5;
 }
+
+li {
+    text-align: left;
+    letter-spacing: 1.2pt;
+    line-height: 0.5;
+    width: 40px;
+    height: 50px;
+    font-size: 30px;
+    display: table;
+    float: center;
+}
+
+
