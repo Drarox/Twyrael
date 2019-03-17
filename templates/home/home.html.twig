@@ -23,6 +23,16 @@
             <h4>Le {{attribut.date_creation|date('d/m/Y H:i:s') }}, <a href="/user/{{ attribut.pseudo }}">{{ attribut.pseudo }}</a> à écrit : </h4>
         {{attribut.contenu}} <br>
         </span>
+        {% for rep in reply %}
+            {% if rep[0][0].idMessage == attribut.id %}
+                <span class="reply">
+                        <h4>Le {{rep[0][0].date|date('d/m/Y H:i:s') }}, <a href="/user/{{ rep[1] }}">{{ rep[1] }}</a> à répondu : </h4>
+                        {{rep[0][0].contenu}} <br>
+                    </span>
+            {% endif %}
+
+        {% endfor %}
+        <a href="/reply/{{ attribut.id }}" style="text-decoration: none"> <input type="button" value="Répondre"> </a>
         <br>
     {% endfor %}
 </div>

@@ -22,7 +22,7 @@ class ReplyMessageController extends AbstractController
         $currentUser= $user->getId();
         $em = $this->getDoctrine()->getManager ();
         $repositoryMessages = $em->getRepository ( Messages::class)->find($id);
-        $pseudo = $em->getRepository ( Utilisateur::class)->getUsername($repositoryMessages);
+        $pseudo = $em->getRepository ( Utilisateur::class)->getUsername($repositoryMessages->getIdUserCreation());
 
         $reply = new Reponse();
         $form = $this->createForm(ReplyType::class, $reply);
