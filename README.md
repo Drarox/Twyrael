@@ -2,7 +2,7 @@
 
 Project about creating a twitter like site for diablo fans.
 
-Authors : (students from University of Strasbourg)
+Authors : (students from [University of Strasbourg](https://www.en.unistra.fr/))
 - Burkard Yannick
 - Fuchs Johan
 - Hauser Esteban
